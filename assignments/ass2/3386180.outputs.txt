@@ -1,0 +1,494 @@
+TEST 1 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_configuration([73, 74, 75, 76])'
+Invalid configuration.
+
+TEST 1 END
+
+TEST 2 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_configuration([]); print(game.get_configuration()); print(game.get_configuration_length())'
+[]
+0
+
+TEST 2 END
+
+TEST 3 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_configuration([14, 13, 32, 55, 31, 32, 14, 14, 66, 13]); print(game.get_configuration()); print(game.get_configuration_length())'
+[66, 55, 14, 13, 32, 31]
+6
+
+TEST 3 END
+
+TEST 4 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_complement_configuration([37, 47, 57, 37, 47, 57, 64, 74, 22, 32, 51, 52, 53]); print(game.get_configuration())'
+[26, 36, 46, 56, 66, 15, 25, 35, 45, 55, 65, 75, 14, 24, 34, 44, 54, 13, 23, 33, 43, 63, 73, 42, 62, 31, 41]
+
+TEST 4 END
+
+TEST 5 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_configuration([26, 36, 46, 35, 45, 55, 44, 64, 33, 43, 22, 42]); game.apply_jumps([[36, 56], [56, 54], [54, 34], [42, 44], [34, 54], [64, 44], [45, 43]]); print(game.get_configuration())'
+[26, 35, 33, 43, 22]
+
+TEST 5 END
+
+TEST 6 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_complement_configuration([37, 47, 57, 15, 25, 63, 73, 22, 32, 31, 41]); game.apply_jumps([[65, 63], [45, 47], [66, 46], [47, 45], [43, 41], [62, 42], [41, 43], [34, 32], [13, 33], [32, 34], [35, 33], [55, 35], [75, 73], [26, 46], [14, 34], [44, 24], [54, 52], [73, 53], [43, 63], [51, 53], [63, 43]]); print(game.get_configuration())'
+[46, 35, 24, 33, 43]
+
+TEST 6 END
+
+TEST 7 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_configuration([26, 36, 46, 35, 45, 55, 37, 44, 64, 33, 43, 22, 42, 51, 41, 31]); game.apply_jumps([[45, 47], [43, 45], [26, 46], [45, 25], [47, 45], [45, 65], [65, 63], [41, 43], [43, 23], [22, 24], [25, 23],[23, 25]]); game.get_configuration()'
+Invalid sequence of jumps.
+
+TEST 7 END
+
+TEST 8 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_complement_configuration([37, 47, 57, 15, 25, 63, 73, 22, 32, 31, 41]); game.apply_jumps([[65, 63], [45, 47], [66, 46], [43, 41], [62, 42], [75, 73], [36, 34], [55, 35], [23, 25], [41, 43], [47, 45]]); game.get_configuration()'
+Invalid sequence of jumps.
+
+TEST 8 END
+
+TEST 9 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_configuration([25, 35, 45, 55, 65, 75, 14, 24, 34, 44, 54, 64, 74]); print(game.configuration_is([64, 64, 14, 24, 34, 25, 35, 45, 55, 64, 65, 75, 44, 54, 64, 74, 25, 35, 25]))'
+True
+
+TEST 9 END
+
+TEST 10 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_configuration([25, 35, 45, 55, 65, 75, 14, 24, 34, 44, 54, 64, 74]); print(game.configuration_is([64, 64, 14, 24, 25, 35, 45, 55, 64, 65, 75, 44, 54, 64, 74, 25, 35, 25]))'
+False
+
+TEST 10 END
+
+TEST 11 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_configuration([25, 35, 45, 55, 65, 75, 14, 24, 34, 44, 54, 64, 74]); print(game.configuration_is([64, 64, 14, 24, 34, 25, 35, 45, 55, 41, 64, 65, 75, 44, 54, 64, 74, 25, 35, 25]))'
+False
+
+TEST 11 END
+
+TEST 12 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_configuration([31, 47, 26, 34, 44, 57, 64, 74,  31]); game.display_configuration()'
+    O X X
+  X O O O O
+O O O O O O O
+O O X X O X X
+O O O O O O O
+  O O O O O
+    X O O
+
+TEST 12 END
+
+TEST 13 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_complement_configuration([0, 1, 44, 0, 1, 44, 45, 33, 43, 53, 63]); game.display_configuration()'
+    X X X
+  X X X X X
+X X X O X X X
+X X X O X X X
+X X O O O O X
+  X X X X X
+    X X X
+
+TEST 13 END
+
+TEST 14 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_configuration([36, 65, 45, 35, 22, 42, 32, 24, 34, 44, 74, 37, 51]); game.display_jumps([[34, 54], [32, 52], [45, 25], [25, 23], [37, 35], [22, 24], [51, 53], [53, 55], [65, 45], [45, 25]])'
+    X O O
+  O X O O O
+O O X X O X O
+O X O O X O X
+O O O O O O O
+  X X X O O
+    O O X
+
+    X O O
+  O X O O O
+O O X X O X O
+O X O O X O X
+O O O O O O O
+  X O O X O
+    O O X
+
+    X O O
+  O X O O O
+O X O O O X O
+O X O O X O X
+O O O O O O O
+  X O O X O
+    O O X
+
+    X O O
+  O X O O O
+O O O O O X O
+O O O O X O X
+O X O O O O O
+  X O O X O
+    O O X
+
+    O O O
+  O O O O O
+O O X O O X O
+O O O O X O X
+O X O O O O O
+  X O O X O
+    O O X
+
+    O O O
+  O O O O O
+O O X O O X O
+O X O O X O X
+O O O O O O O
+  O O O X O
+    O O X
+
+    O O O
+  O O O O O
+O O X O O X O
+O X O O X O X
+O O O O X O O
+  O O O O O
+    O O O
+
+    O O O
+  O O O O O
+O O X O X X O
+O X O O O O X
+O O O O O O O
+  O O O O O
+    O O O
+
+    O O O
+  O O O O O
+O O X X O O O
+O X O O O O X
+O O O O O O O
+  O O O O O
+    O O O
+
+    O O O
+  O O O O O
+O X O O O O O
+O X O O O O X
+O O O O O O O
+  O O O O O
+    O O O
+
+TEST 14 END
+
+TEST 15 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_configuration([13, 23, 43, 31, 41, 37, 75, 36, 46, 74, 64, 63, 53]); game.apply_jumps([[36, 56], [31, 51], [74, 54], [53, 55], [56, 54], [13, 33], [33, 53]]) ; game.apply_reverse_jumps([[36, 56], [31, 51], [74, 54], [53, 55], [56, 54], [13, 33]])'
+Invalid sequence of jumps.
+
+TEST 15 END
+
+TEST 16 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_complement_configuration([13, 37, 47, 57, 43, 31, 41, 37, 75, 74, 64, 63, 15, 14, 75, 64, 52, 15, 14, 13, 25]); game.apply_jumps([[45, 43], [43, 41], [22, 42], [41, 43], [23, 25], [26, 24], [24, 44], [36, 34], [65, 45], [45, 47], [66, 46], [47, 45]]) ; game.display_reverse_jumps([[23, 35], [45, 43], [43, 41], [22, 42], [41, 43], [26, 24], [24, 44], [36, 34], [65, 45], [45, 47], [66, 46], [47, 45]])'
+Program could not run or crashed
+
+TEST 16 END
+
+TEST 17 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_configuration([13, 23, 43, 31, 41, 37, 75, 74, 64, 63, 53]); game.apply_jumps([[31, 51], [74, 54], [54, 52], [13, 33], [33, 53], [63, 43], [51, 53]]) ; game.apply_reverse_jumps([[31, 51], [74, 54], [54, 52], [13, 33], [33, 53], [63, 43], [51, 53]]) ; print(game.get_configuration())'
+[37, 75, 64, 74, 13, 23, 43, 53, 63, 31, 41]
+
+TEST 17 END
+
+TEST 18 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ; game.set_complement_configuration([13, 37, 47, 57, 23, 43, 31, 41, 37, 75, 74, 64, 63, 53, 15, 14, 75, 64, 52, 15, 14, 13, 25]); game.apply_jumps([[45, 43], [43, 41], [22, 42], [41, 43], [24, 44], [43, 45], [36, 34], [56, 36], [26, 46], [66, 64], [45, 65], [65, 63], [34, 32]]) ; game.display_reverse_jumps([[45, 43], [43, 41], [22, 42], [41, 43], [24, 44], [43, 45], [36, 34], [56, 36], [26, 46], [66, 64], [45, 65], [65, 63], [34, 32]])'
+    O O O
+  O O X O O
+O O O O O O O
+O O X O X O O
+O O X O O X X
+  O O O O X
+    O O X
+
+    O O O
+  O O X O O
+O O O O O X O
+O O X O X X O
+O O X O O O X
+  O O O O X
+    O O X
+
+    O O O
+  O O X O O
+O O O X X O O
+O O X O X X O
+O O X O O O X
+  O O O O X
+    O O X
+
+    O O O
+  O O X O X
+O O O X X X O
+O O X O X O O
+O O X O O O X
+  O O O O X
+    O O X
+
+    O O O
+  X X O O X
+O O O X X X O
+O O X O X O O
+O O X O O O X
+  O O O O X
+    O O X
+
+    O O O
+  X O X X X
+O O O X X X O
+O O X O X O O
+O O X O O O X
+  O O O O X
+    O O X
+
+    O O O
+  X X X X X
+O O X X X X O
+O O O O X O O
+O O X O O O X
+  O O O O X
+    O O X
+
+    O O O
+  X X X X X
+O O X O X X O
+O O O X X O O
+O O X X O O X
+  O O O O X
+    O O X
+
+    O O O
+  X X X X X
+O O X O X X O
+O X X O X O O
+O O X X O O X
+  O O O O X
+    O O X
+
+    O O O
+  X X X X X
+O O X O X X O
+O X X O X O O
+O O X O O O X
+  O O X O X
+    O X X
+
+    O O O
+  X X X X X
+O O X O X X O
+O X X O X O O
+O O X O O O X
+  X X O O X
+    O X X
+
+    O O O
+  X X X X X
+O O X O X X O
+O X X O X O O
+O O X X O O X
+  X X X O X
+    O O X
+
+    O O O
+  X X X X X
+O O X X X X O
+O X X X X O O
+O O X O O O X
+  X X X O X
+    O O X
+
+TEST 18 END
+
+TEST 19 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_configuration([37, 57, 36, 46, 66, 15, 25, 55, 65, 24, 34, 23, 43, 51]) ; print(game.list_possible_next_jump())'
+[[37, 35], [36, 56], [46, 26], [66, 64], [15, 35], [55, 75], [65, 45], [24, 26], [24, 44], [24, 22], [34, 14]]
+
+TEST 19 END
+
+TEST 20 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([47, 75, 24, 44, 54, 43, 53, 41]) ; print(game.list_possible_next_jump())'
+[[26, 24], [46, 44], [56, 54], [45, 47], [55, 75], [74, 54], [23, 43], [73, 75], [73, 53], [22, 24], [51, 53]]
+
+TEST 20 END
+
+TEST 21 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([57]) ; game.apply_jumps(game.generated_sequence_of_jumps()) ; print(game.get_configuration_length())'
+Max running time exceeded, program killed
+
+TEST 21 END
+
+TEST 22 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([73]) ; game.apply_jumps(game.generated_sequence_of_jumps()) ; print(game.get_configuration_length())'
+Max running time exceeded, program killed
+
+TEST 22 END
+
+TEST 23 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([31]) ; game.apply_jumps(game.generated_sequence_of_jumps()) ; print(game.get_configuration_length())'
+Max running time exceeded, program killed
+
+TEST 23 END
+
+TEST 24 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([13]) ; game.apply_jumps(game.generated_sequence_of_jumps()) ; print(game.get_configuration_length())'
+Max running time exceeded, program killed
+
+TEST 24 END
+
+TEST 25 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([24]) ; game.apply_jumps(game.generated_sequence_of_jumps()) ; print(game.get_configuration_length())'
+Max running time exceeded, program killed
+
+TEST 25 END
+
+TEST 26 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([42]) ; game.apply_jumps(game.generated_sequence_of_jumps()) ; print(game.get_configuration_length())'
+Max running time exceeded, program killed
+
+TEST 26 END
+
+TEST 27 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([34]) ; game.apply_jumps(game.generated_sequence_of_jumps()) ; print(game.get_configuration_length())'
+Max running time exceeded, program killed
+
+TEST 27 END
+
+TEST 28 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_configuration([23, 24, 25, 32, 33, 34, 35, 36, 42, 43, 45, 46, 52, 53, 54, 55, 56, 63, 64, 65]) ; game.apply_jumps(game.generated_sequence_of_jumps()) ; print(game.get_configuration_length())'
+Max running time exceeded, program killed
+
+TEST 28 END
+
+TEST 29 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_configuration([22, 23, 25, 26, 32, 33, 34, 35, 36, 43, 44, 45, 52, 53, 54, 55, 56, 62, 63, 65, 66]) ; game.apply_jumps(game.generated_sequence_of_jumps()) ; print(game.get_configuration_length())'
+Max running time exceeded, program killed
+
+TEST 29 END
+
+TEST 30 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_configuration([14, 22, 23, 25, 26, 32, 33, 35, 36, 41, 44, 47, 52, 53, 55, 56, 62, 63, 65, 66, 74]) ; game.apply_jumps(game.generated_sequence_of_jumps()) ; print(game.get_configuration_length())'
+Max running time exceeded, program killed
+
+TEST 30 END
+
+TEST 31 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_configuration([14, 23, 24, 25, 32, 34, 36, 41, 42, 43, 44, 45, 46, 47, 52, 54, 56, 63, 64, 65, 74]) ; game.apply_jumps(game.generated_sequence_of_jumps()) ; print(game.get_configuration_length())'
+Max running time exceeded, program killed
+
+TEST 31 END
+
+TEST 32 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_configuration([14, 22, 24, 26, 33, 34, 35, 41, 42, 43, 44, 45, 46, 47, 53, 54, 55, 62, 64, 66, 74]) ; game.apply_jumps(game.generated_sequence_of_jumps()) ; print(game.get_configuration_length())'
+Max running time exceeded, program killed
+
+TEST 32 END
+
+TEST 33 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_configuration([14, 22, 23, 24, 25, 26, 32, 34, 36, 41, 42, 43, 45, 46, 47, 52, 54, 56, 62, 63, 64, 65, 66, 74]) ; game.apply_jumps(game.generated_sequence_of_jumps()) ; print(game.get_configuration_length())'
+Max running time exceeded, program killed
+
+TEST 33 END
+
+TEST 34 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_configuration([47, 36, 56, 45, 44, 22, 42, 52, 41]) ; game.apply_jumps(game.generated_sequence_of_jumps()) ; print(game.get_configuration_length())'
+5
+
+TEST 34 END
+
+TEST 35 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_configuration([26, 36, 46, 56, 66, 43, 53, 63, 73, 22, 42]) ; game.apply_jumps(game.generated_sequence_of_jumps()) ; print(game.get_configuration_length())'
+5
+
+TEST 35 END
+
+TEST 36 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_configuration([37, 57, 26, 66, 25, 35, 45, 55, 65, 43, 53, 63, 22, 32, 31, 51]) ; game.apply_jumps(game.generated_sequence_of_jumps()) ; print(game.get_configuration_length())'
+9
+
+TEST 36 END
+
+TEST 37 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([37, 57, 26, 66, 25, 35, 45, 55, 65, 43, 53, 63, 22, 32, 31, 51]) ; game.apply_jumps(game.generated_sequence_of_jumps()) ; print(game.get_configuration_length())'
+Max running time exceeded, program killed
+
+TEST 37 END
+
+TEST 38 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([37]) ; game.apply_jumps(game.generated_sequence_of_jumps(goal = [57])) ; print(game.configuration_is([57]))'
+Max running time exceeded, program killed
+
+TEST 38 END
+
+TEST 39 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([37]) ; game.apply_jumps(game.generated_sequence_of_jumps(goal = [24])) ; print(game.configuration_is([24]))'
+Max running time exceeded, program killed
+
+TEST 39 END
+
+TEST 40 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([37]) ; game.apply_jumps(game.generated_sequence_of_jumps(goal = [54])) ; print(game.configuration_is([54]))'
+Max running time exceeded, program killed
+
+TEST 40 END
+
+TEST 41 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([37]) ; game.apply_jumps(game.generated_sequence_of_jumps(goal = [51])) ; print(game.configuration_is([51]))'
+Max running time exceeded, program killed
+
+TEST 41 END
+
+TEST 42 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([45]) ; game.apply_jumps(game.generated_sequence_of_jumps(goal = [13])) ; print(game.configuration_is([13]))'
+Max running time exceeded, program killed
+
+TEST 42 END
+
+TEST 43 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([45]) ; game.apply_jumps(game.generated_sequence_of_jumps(goal = [46])) ; print(game.configuration_is([46]))'
+Max running time exceeded, program killed
+
+TEST 43 END
+
+TEST 44 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([45]) ; game.apply_jumps(game.generated_sequence_of_jumps(goal = [43])) ; print(game.configuration_is([43]))'
+Max running time exceeded, program killed
+
+TEST 44 END
+
+TEST 45 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([46]) ; game.apply_jumps(game.generated_sequence_of_jumps(goal = [15])) ; print(game.configuration_is([15]))'
+Max running time exceeded, program killed
+
+TEST 45 END
+
+TEST 46 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([46]) ; game.apply_jumps(game.generated_sequence_of_jumps(goal = [42])) ; print(game.configuration_is([42]))'
+Max running time exceeded, program killed
+
+TEST 46 END
+
+TEST 47 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([46]) ; game.apply_jumps(game.generated_sequence_of_jumps(goal = [45])) ; print(game.configuration_is([45]))'
+Max running time exceeded, program killed
+
+TEST 47 END
+
+TEST 48 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([75, 36, 74, 54, 57, 55, 47]) ; game.apply_jumps(game.generated_sequence_of_jumps(goal = [51])) ; print(game.configuration_is([51]))'
+Max running time exceeded, program killed
+
+TEST 48 END
+
+TEST 49 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([37, 34, 74, 22, 53, 51, 75]) ; game.apply_jumps(game.generated_sequence_of_jumps(goal = [45])) ; print(game.configuration_is([45]))'
+Max running time exceeded, program killed
+
+TEST 49 END
+
+TEST 50 BEGIN
+$ python3 -c 'from solitaire import * ; game = Solitaire() ;game.set_complement_configuration([65, 64, 23, 25, 45, 41, 62, 14, 75, 66, 22, 13, 46, 36]) ; game.apply_jumps(game.generated_sequence_of_jumps(goal = [55])) ; print(game.configuration_is([55]))'
+Max running time exceeded, program killed
+
+TEST 50 END
+

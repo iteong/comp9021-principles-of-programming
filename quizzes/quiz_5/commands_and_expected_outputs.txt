@@ -1,0 +1,66 @@
+TEST 1 BEGIN
+$ python3 -c 'from quiz_5 import *; p1 = Point(3,5); p2 = Point(3,5); line = NonVerticalLine(point_1 = p1, point_2 = p2) '
+Incorrect input, line not created.
+
+TEST 1 END
+
+TEST 2 BEGIN
+$ python3 -c 'from quiz_5 import *; p1 = Point(3,5); p2 = Point(5,3); line = NonVerticalLine(point_1 = p1, point_2 = p2); print(line.slope); print(line.intercept)'
+-1.0
+8.0
+
+TEST 2 END
+
+TEST 3 BEGIN
+$ python3 -c 'from quiz_5 import *; p1 = Point(3,5); p2 = Point(3,-3); line = NonVerticalLine(point_1 = p1, point_2 = p2)'
+Incorrect input, line not created.
+
+TEST 3 END
+
+TEST 4 BEGIN
+$ python3 -c 'from quiz_5 import *; p1 = Point(7,2); p2 = Point(4,9); p3 = Point(4,9); line = NonVerticalLine(point_1 = p1, point_2 = p2); line.change_point_or_points(point_1 = p3)'
+Could not perform this change.
+
+TEST 4 END
+
+TEST 5 BEGIN
+$ python3 -c 'from quiz_5 import *; p1 = Point(7,2); p2 = Point(4,9); p3 = Point(4,9); line = NonVerticalLine(point_1 = p1, point_2 = p2); line.change_point_or_points(point_2 = p3); print(line.slope); print(line.intercept)'
+-2.3333333333333335
+18.333333333333336
+
+TEST 5 END
+
+TEST 6 BEGIN
+$ python3 -c 'from quiz_5 import *; p1 = Point(7,2); p2 = Point(4,9); line = NonVerticalLine(point_1 = p1, point_2 = p2); line.change_point_or_points(point_1 = p2, point_2 = p1); print(line.slope); print(line.intercept)'
+-2.3333333333333335
+18.333333333333336
+
+TEST 6 END
+
+TEST 7 BEGIN
+$ python3 -c 'from quiz_5 import *; p1 = Point(7,2); p2 = Point(4,9); line = NonVerticalLine(point_1 = p1, point_2 = p2); p3 = Point(1,11); p4 = Point(6,2); line.change_point_or_points(point_2 = p3, point_1 = p4); print(line.slope); print(line.intercept)'
+-1.8
+12.8
+
+TEST 7 END
+
+TEST 8 BEGIN
+$ python3 -c 'from quiz_5 import *; p1 = Point(7,2); p2 = Point(4,9); line = NonVerticalLine(point_1 = p1, point_2 = p2); line.change_point_or_points(); print(line.slope); print(line.intercept)'
+-2.3333333333333335
+18.333333333333336
+
+TEST 8 END
+
+TEST 9 BEGIN
+$ python3 -c 'from quiz_5 import *; p1 = Point(7,2); p2 = Point(4,9); line = NonVerticalLine(point_1 = p1, point_2 = p2); p3 = Point(1,11); line.change_point_or_points(point_1 = p3); print(line.slope); print(line.intercept)'
+-0.6666666666666666
+11.666666666666666
+
+TEST 9 END
+
+TEST 10 BEGIN
+$ python3 -c 'from quiz_5 import *; p1 = Point(7,2); p2 = Point(4,9); line = NonVerticalLine(point_1 = p1, point_2 = p2); p3 = Point(7,-11); line.change_point_or_points(point_2 = p3)'
+Could not perform this change.
+
+TEST 10 END
+

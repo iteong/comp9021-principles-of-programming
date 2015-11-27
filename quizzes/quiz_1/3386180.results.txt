@@ -1,0 +1,22 @@
+Test 1 ... failed	0
+Test 2 ... failed	0
+Test 3 ... failed	0
+Test 4 ... failed	0
+Test 5 ... failed	0
+Test 6 ... failed	0
+Test 7 ... failed	0
+Test 8 ... failed	0
+Test 9 ... failed	0
+Test 10 ... failed	0
+Test 11 ... failed	0
+Test 12 ... failed	0
+Test 13 ... failed	0
+Test 14 ... failed	0
+Test 15 ... failed	0
+Test 16 ... failed	0
+Test 17 ... failed	0
+Test 18 ... failed	0
+Test 19 ... failed	0
+Test 20 ... failed	0
+
+Total mark    	0

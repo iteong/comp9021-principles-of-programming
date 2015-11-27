@@ -1,0 +1,140 @@
+TEST 1 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 123 1 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 6, 34, 11, 98, 52, 34
+6, 34, 11, 34, 52, 98
+
+TEST 1 END
+
+TEST 2 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 123 2 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 6, 34, 11, 98, 52, 34, 13, 4
+4, 13, 34, 6, 98, 11, 34, 52
+
+TEST 2 END
+
+TEST 3 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 123 3 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 6, 34, 11, 98, 52, 34, 13, 4, 48, 68
+4, 13, 68, 48, 34, 6, 98, 11, 34, 52
+
+TEST 3 END
+
+TEST 4 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 123 5 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 6, 34, 11, 98, 52, 34, 13, 4, 48, 68, 71, 42, 43, 6
+4, 13, 68, 48, 42, 71, 6, 43, 34, 6, 98, 11, 34, 52
+
+TEST 4 END
+
+TEST 5 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 123 7 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 6, 34, 11, 98, 52, 34, 13, 4, 48, 68, 71, 42, 43, 6, 20, 17, 43, 71
+4, 13, 68, 48, 42, 71, 6, 43, 17, 20, 71, 43, 34, 6, 98, 11, 34, 52
+
+TEST 5 END
+
+TEST 6 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 123 8 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 6, 34, 11, 98, 52, 34, 13, 4, 48, 68, 71, 42, 43, 6, 20, 17, 43, 71, 42, 89
+4, 13, 68, 48, 42, 71, 6, 43, 17, 20, 71, 43, 89, 42, 34, 6, 98, 11, 34, 52
+
+TEST 6 END
+
+TEST 7 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 549 1 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 82, 25, 60, 20, 89, 69
+20, 60, 69, 89, 25, 82
+
+TEST 7 END
+
+TEST 8 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 549 2 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 82, 25, 60, 20, 89, 69, 62, 23
+20, 60, 69, 89, 23, 62, 25, 82
+
+TEST 8 END
+
+TEST 9 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 549 3 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 82, 25, 60, 20, 89, 69, 62, 23, 36, 49
+20, 60, 69, 89, 23, 62, 49, 36, 25, 82
+
+TEST 9 END
+
+TEST 10 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 549 5 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 82, 25, 60, 20, 89, 69, 62, 23, 36, 49, 8, 41, 44, 84
+8, 49, 44, 41, 82, 84, 60, 25, 89, 20, 62, 69, 36, 23
+
+TEST 10 END
+
+TEST 11 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 549 7 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 82, 25, 60, 20, 89, 69, 62, 23, 36, 49, 8, 41, 44, 84, 11, 9, 26, 25
+8, 49, 44, 41, 11, 84, 26, 9, 82, 25, 60, 25, 89, 20, 62, 69, 36, 23
+
+TEST 11 END
+
+TEST 12 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 549 8 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 82, 25, 60, 20, 89, 69, 62, 23, 36, 49, 8, 41, 44, 84, 11, 9, 26, 25, 22, 64
+8, 49, 44, 41, 11, 84, 26, 9, 22, 25, 82, 64, 60, 25, 89, 20, 62, 69, 36, 23
+
+TEST 12 END
+
+TEST 13 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 956 1 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 87, 50, 19, 54, 94, 85
+19, 50, 94, 54, 87, 85
+
+TEST 13 END
+
+TEST 14 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 956 2 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 87, 50, 19, 54, 94, 85, 58, 91
+19, 50, 94, 54, 58, 85, 87, 91
+
+TEST 14 END
+
+TEST 15 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 956 3 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 87, 50, 19, 54, 94, 85, 58, 91, 84, 11
+11, 84, 50, 87, 54, 19, 85, 94, 91, 58
+
+TEST 15 END
+
+TEST 16 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 956 5 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 87, 50, 19, 54, 94, 85, 58, 91, 84, 11, 76, 35, 32, 32
+11, 84, 35, 76, 32, 32, 50, 87, 54, 19, 85, 94, 91, 58
+
+TEST 16 END
+
+TEST 17 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 956 7 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 87, 50, 19, 54, 94, 85, 58, 91, 84, 11, 76, 35, 32, 32, 58, 77, 40, 80
+11, 84, 35, 76, 32, 32, 77, 58, 80, 40, 50, 87, 54, 19, 85, 94, 91, 58
+
+TEST 17 END
+
+TEST 18 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 956 8 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 87, 50, 19, 54, 94, 85, 58, 91, 84, 11, 76, 35, 32, 32, 58, 77, 40, 80, 72, 90
+11, 84, 35, 76, 32, 32, 77, 58, 80, 40, 90, 72, 50, 87, 54, 19, 85, 94, 91, 58
+
+TEST 18 END
+
+TEST 19 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 86 9 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 99, 3, 71, 40, 95, 1, 98, 8, 90, 64, 94, 80, 38, 92, 48, 13, 64, 12, 52, 58, 0, 74
+0, 58, 99, 74, 71, 3, 95, 40, 98, 1, 90, 8, 94, 64, 38, 80, 48, 92, 64, 13, 52, 12
+
+TEST 19 END
+
+TEST 20 BEGIN
+$ grep '\[' extended_linked_list.py ; if [ $? -ne 0 ] ; then grep [^_]list extended_linked_list.py ; if [ $? -ne 0 ] ; then echo 91 10 | python3 quiz_7.py ; fi ; fi
+Enter 2 integers: 10, 75, 22, 87, 86, 20, 51, 58, 95, 56, 59, 58, 32, 31, 24, 77, 47, 62, 27, 27, 49, 96, 11, 98
+10, 98, 22, 75, 86, 87, 51, 20, 95, 58, 59, 56, 32, 58, 24, 31, 47, 77, 27, 62, 49, 27, 11, 96
+
+TEST 20 END
+

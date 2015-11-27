@@ -1,0 +1,190 @@
+TEST 1 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 2 3 L 4 5')"
+The input should consist of numbers.
+
+TEST 1 END
+
+TEST 2 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 2 3 4 5 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19')"
+The input should consist of between 4 and 20 numbers.
+
+TEST 2 END
+
+TEST 3 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('10 0 9 1 8 2 7 3 6 4')"
+The input should consist of 0, 1, 2... N, in some order.
+
+TEST 3 END
+
+TEST 4 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 2 1 4 3 6 5 8 7 10 9')"
+The input should start with 0 and end with the largest number.
+
+TEST 4 END
+
+TEST 5 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 2 3 4 5 7 6 9 8 10')"
+The input should alternate between even and odd numbers.
+
+TEST 5 END
+
+TEST 6 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 3 4 1 2 5')"
+The input defines overlapping pairs.
+
+TEST 6 END
+
+TEST 7 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 5 6 1 4 3 2 7')"
+The input defines overlapping pairs.
+
+TEST 7 END
+
+TEST 8 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 6 3 4 5 8 7 2 9 10')"
+The input defines overlapping pairs.
+
+TEST 8 END
+
+TEST 9 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 2 11 12 5 6 7 8 9 4 3 10 13')"
+The input defines overlapping pairs.
+
+TEST 9 END
+
+TEST 10 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 2 9 4 5 12 7 8 3 10 13 6 11 14')"
+The input defines overlapping pairs.
+
+TEST 10 END
+
+TEST 11 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 14 3 10 11 6 5 8 9 4 7 12 13 2 15')"
+The input defines overlapping pairs.
+
+TEST 11 END
+
+TEST 12 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 6 7 14 5 2 3 8 9 10 13 12 11 4 15 16')"
+The input defines overlapping pairs.
+
+TEST 12 END
+
+TEST 13 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 12 3 6 5 4 7 8 9 10 15 2 13 14 11 16 17')"
+The input defines overlapping pairs.
+
+TEST 13 END
+
+TEST 14 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 2 3 4 15 16 17 10 11 8 9 12 7 14 5 6 13 18')"
+The input defines overlapping pairs.
+
+TEST 14 END
+
+TEST 15 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 3 2 1 12 5 6 7 18 9 10 11 4 15 14 13 16 17 8 19')"
+The input defines overlapping pairs.
+
+TEST 15 END
+
+TEST 16 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 4 3 2 5 6')"
+
+TEST 16 END
+
+TEST 17 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 3 6 5 4 7 2 1 8')"
+
+TEST 17 END
+
+TEST 18 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 7 6 3 2 1 4 5 8')"
+
+TEST 18 END
+
+TEST 19 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 2 11 8 9 10 3 6 5 4 7 12')"
+
+TEST 19 END
+
+TEST 20 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 2 3 4 7 6 5 10 9 8 11 12 13')"
+
+TEST 20 END
+
+TEST 21 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 13 2 11 4 9 6 7 8 5 10 3 12 1 14')"
+
+TEST 21 END
+
+TEST 22 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 14 13 12 5 10 7 8 9 6 11 2 3 4 15')"
+
+TEST 22 END
+
+TEST 23 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 15 2 13 6 5 4 7 10 9 8 11 12 3 14 1 16 17')"
+
+TEST 23 END
+
+TEST 24 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18')"
+
+TEST 24 END
+
+TEST 25 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19')"
+
+TEST 25 END
+
+TEST 26 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 4 3 2 5 6') ; maze.generate_latex_code('maze_1')"
+
+TEST 26 END
+
+TEST 27 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 3 6 5 4 7 2 1 8') ; maze.generate_latex_code('maze_2')"
+
+TEST 27 END
+
+TEST 28 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 7 6 3 2 1 4 5 8') ; maze.generate_latex_code('maze_3')"
+
+TEST 28 END
+
+TEST 29 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 2 11 8 9 10 3 6 5 4 7 12') ; maze.generate_latex_code('maze_4')"
+
+TEST 29 END
+
+TEST 30 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 2 3 4 7 6 5 10 9 8 11 12 13') ; maze.generate_latex_code('maze_5')"
+
+TEST 30 END
+
+TEST 31 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 13 2 11 4 9 6 7 8 5 10 3 12 1 14') ; maze.generate_latex_code('maze_6')"
+
+TEST 31 END
+
+TEST 32 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 14 13 12 5 10 7 8 9 6 11 2 3 4 15') ; maze.generate_latex_code('maze_7')"
+
+TEST 32 END
+
+TEST 33 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 15 2 13 6 5 4 7 10 9 8 11 12 3 14 1 16 17') ; maze.generate_latex_code('maze_8')"
+
+TEST 33 END
+
+TEST 34 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18') ; maze.generate_latex_code('maze_9')"
+
+TEST 34 END
+
+TEST 35 BEGIN
+$ python3 -c "from maze import * ; maze = Maze('0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19') ; maze.generate_latex_code('maze_10')"
+
+TEST 35 END
+

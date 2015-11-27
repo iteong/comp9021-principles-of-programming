@@ -1,0 +1,69 @@
+TEST 1 BEGIN
+$ echo laurence | python3 quiz_4.py
+Enter a female first name: laurence is not a female first name in my records.
+
+TEST 1 END
+
+TEST 2 BEGIN
+$ echo Joline | python3 quiz_4.py
+Enter a female first name: By decreasing order of frequency, Joline was most popular in the years: 1928 
+Its rank was 892 then.
+
+TEST 2 END
+
+TEST 3 BEGIN
+$ echo Mary | python3 quiz_4.py
+Enter a female first name: By decreasing order of frequency, Mary was most popular in the years: 1880 1882 1881 1884 1883 1885 1886 1887 1888 1889 1890 1891 1892 1922 1893 1921 1914 1917 1923 1927 1920 1915 1894 1924 1916 1913 1911 1919 1918 1896 1925 1928 1912 1910 1895 1897 1926 1930 1929 1931 1899 1932 1908 1900 1898 1909 1906 1907 1905 1933 1901 1902 1934 1903 1904 1935 1937 1936 1938 1939 1940 1941 1943 1944 1942 1945 1946 1954 1953 1955 1956 1957 1958 1959 1960 1961 
+Its rank was 1 then.
+
+TEST 3 END
+
+TEST 4 BEGIN
+$ echo Alyssa | python3 quiz_4.py
+Enter a female first name: By decreasing order of frequency, Alyssa was most popular in the years: 1999 1998 
+Its rank was 11 then.
+
+TEST 4 END
+
+TEST 5 BEGIN
+$ echo Grace | python3 quiz_4.py
+Enter a female first name: By decreasing order of frequency, Grace was most popular in the years: 1890 1884 1883 2003 2004 
+Its rank was 13 then.
+
+TEST 5 END
+
+TEST 6 BEGIN
+$ echo Lela | python3 quiz_4.py
+Enter a female first name: By decreasing order of frequency, Lela was most popular in the years: 1894 1896 
+Its rank was 113 then.
+
+TEST 6 END
+
+TEST 7 BEGIN
+$ echo Minnie | python3 quiz_4.py
+Enter a female first name: By decreasing order of frequency, Minnie was most popular in the years: 1880 1882 1883 1884 1886 
+Its rank was 5 then.
+
+TEST 7 END
+
+TEST 8 BEGIN
+$ echo Jennifer | python3 quiz_4.py
+Enter a female first name: By decreasing order of frequency, Jennifer was most popular in the years: 1974 1973 1972 1976 1975 1977 1978 1979 1980 1981 1971 1982 1983 1984 1970 
+Its rank was 1 then.
+
+TEST 8 END
+
+TEST 9 BEGIN
+$ echo Zsazsa | python3 quiz_4.py
+Enter a female first name: By decreasing order of frequency, Zsazsa was most popular in the years: 1965 
+Its rank was 3146 then.
+
+TEST 9 END
+
+TEST 10 BEGIN
+$ echo Zinna | python3 quiz_4.py
+Enter a female first name: By decreasing order of frequency, Zinna was most popular in the years: 1964 
+Its rank was 6000 then.
+
+TEST 10 END
+

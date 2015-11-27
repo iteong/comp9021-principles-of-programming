@@ -1,0 +1,54 @@
+Test 1 ... passed	2.5
+Test 2 ... passed	0.5
+Test 3 ... passed	0.5
+Test 4 ... passed	0.75
+Test 5 ... passed	0.75
+Test 6_1 ... failed	0
+Test 6_2 ... passed	0.15
+Test 6_3 ... failed	0
+Test 6_4 ... failed	0
+Test 7_1 ... failed	0
+Test 7_2 ... passed	0.1
+Test 7_3 ... failed	0
+Test 7_4 ... failed	0
+Test 7_5 ... failed	0
+Test 8_1 ... failed	0
+Test 8_2 ... failed	0
+Test 8_3 ... failed	0
+Test 8_4 ... failed	0
+Test 8_5 ... failed	0
+Test 8_6 ... failed	0
+Test 9_1 ... failed	0
+Test 9_2 ... passed	0.05
+Test 9_3 ... failed	0
+Test 9_4 ... failed	0
+Test 9_5 ... failed	0
+Test 9_6 ... failed	0
+Test 9_7 ... failed	0
+Test 9_8 ... failed	0
+Test 10_1 ... failed	0
+Test 10_2 ... passed	0.1
+Test 10_3 ... failed	0
+Test 10_4 ... failed	0
+Test 11_1 ... failed	0
+Test 11_2 ... failed	0
+Test 11_3 ... failed	0
+Test 11_4 ... failed	0
+Test 11_5 ... failed	0
+Test 11_6 ... failed	0
+Test 11_7 ... failed	0
+Test 12_1 ... failed	0
+Test 12_2 ... failed	0
+Test 12_3 ... failed	0
+Test 12_4 ... failed	0
+Test 12_5 ... failed	0
+Test 12_6 ... failed	0
+Test 12_7 ... failed	0
+
+Penalty       	
+
+Extra mark    	
+
+Style         	1.5
+
+Total mark    	6.90

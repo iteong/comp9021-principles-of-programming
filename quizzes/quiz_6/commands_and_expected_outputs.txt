@@ -1,0 +1,200 @@
+TEST 1 BEGIN
+$ echo 23 2 2 8 8 9 7 | python3 quiz_6.py
+Enter 7 integers,
+  the second and third ones being nonnegative,
+  the last 4 beeing between 0 and 9: Here is the grid that has been generated:
+      1  0  0  1  1  1  1  1  1  0
+      1  0  1  1  0  0  1  1  0  0
+      0  1  1  1  0  1  1  1  1  1
+      0  0  0  1  1  1  0  1  0  1
+      1  1  1  1  1  1  1  1  0  1
+      0  1  1  1  1  1  1  0  0  0
+      1  1  1  1  0  1  0  0  0  1
+      0  1  1  1  1  1  1  0  1  1
+      1  1  1  1  0  1  0  0  1  0
+      1  1  0  1  1  0  1  1  0  1
+
+No path of length 2 connects (8, 8) to (9, 7)
+
+TEST 1 END
+
+TEST 2 BEGIN
+$ echo 23 2 6 0 5 5 5 | python3 quiz_6.py
+Enter 7 integers,
+  the second and third ones being nonnegative,
+  the last 4 beeing between 0 and 9: Here is the grid that has been generated:
+      1  0  0  1  1  1  1  1  1  0
+      1  0  1  1  0  0  1  1  0  0
+      0  1  1  1  0  1  1  1  1  1
+      0  0  0  1  1  1  0  1  0  1
+      1  1  1  1  1  1  1  1  0  1
+      0  1  1  1  1  1  1  0  0  0
+      1  1  1  1  0  1  0  0  0  1
+      0  1  1  1  1  1  1  0  1  1
+      1  1  1  1  0  1  0  0  1  0
+      1  1  0  1  1  0  1  1  0  1
+
+No path of length 6 connects (0, 5) to (5, 5)
+
+TEST 2 END
+
+TEST 3 BEGIN
+$ echo 30 3 14 1 8 6 0 | python3 quiz_6.py
+Enter 7 integers,
+  the second and third ones being nonnegative,
+  the last 4 beeing between 0 and 9: Here is the grid that has been generated:
+      1  0  1  1  0  1  1  1  0  1
+      0  1  0  0  1  1  1  0  1  0
+      1  1  1  0  1  0  1  1  1  1
+      1  1  0  1  1  1  0  0  1  1
+      1  1  1  1  1  1  1  0  0  0
+      1  1  1  1  1  1  1  1  1  1
+      1  1  1  1  1  1  1  1  1  1
+      1  1  1  1  1  1  1  0  1  0
+      1  0  1  1  0  1  0  1  1  1
+      1  1  1  1  1  0  1  0  1  1
+
+No path of length 14 connects (1, 8) to (6, 0)
+
+TEST 3 END
+
+TEST 4 BEGIN
+$ echo 23 1 2 9 7 8 8 | python3 quiz_6.py
+Enter 7 integers,
+  the second and third ones being nonnegative,
+  the last 4 beeing between 0 and 9: Here is the grid that has been generated:
+      1  0  0  1  1  1  1  0  0  1
+      1  0  0  1  0  0  0  1  1  0
+      1  1  0  0  0  1  0  0  1  1
+      1  1  0  1  0  1  1  0  0  0
+      1  0  0  0  0  1  0  1  1  1
+      0  1  1  1  1  0  1  0  0  0
+      1  0  1  0  0  1  0  1  0  0
+      1  1  0  0  0  0  0  0  1  0
+      1  0  1  1  0  0  0  1  1  0
+      1  1  0  0  0  0  0  1  0  1
+
+Number of paths of length 2 that connect (9, 7) to (8, 8): 1
+
+TEST 4 END
+
+TEST 5 BEGIN
+$ echo 30 2 10 8 6 4 2 | python3 quiz_6.py
+Enter 7 integers,
+  the second and third ones being nonnegative,
+  the last 4 beeing between 0 and 9: Here is the grid that has been generated:
+      1  1  1  0  1  1  0  1  0  1
+      1  1  0  0  1  0  1  0  0  0
+      0  1  1  1  1  1  1  0  1  0
+      0  1  1  1  1  1  0  1  1  1
+      1  0  1  1  1  0  1  1  1  1
+      0  0  0  1  1  0  0  1  1  1
+      1  0  1  1  0  1  1  1  1  1
+      1  1  1  1  0  0  1  0  1  1
+      1  1  1  1  1  1  1  0  1  0
+      0  1  1  1  1  0  0  1  1  1
+
+Number of paths of length 10 that connect (8, 6) to (4, 2): 6
+
+TEST 5 END
+
+TEST 6 BEGIN
+$ echo 23 2 12 1 2 7 6 | python3 quiz_6.py
+Enter 7 integers,
+  the second and third ones being nonnegative,
+  the last 4 beeing between 0 and 9: Here is the grid that has been generated:
+      1  0  0  1  1  1  1  1  1  0
+      1  0  1  1  0  0  1  1  0  0
+      0  1  1  1  0  1  1  1  1  1
+      0  0  0  1  1  1  0  1  0  1
+      1  1  1  1  1  1  1  1  0  1
+      0  1  1  1  1  1  1  0  0  0
+      1  1  1  1  0  1  0  0  0  1
+      0  1  1  1  1  1  1  0  1  1
+      1  1  1  1  0  1  0  0  1  0
+      1  1  0  1  1  0  1  1  0  1
+
+Number of paths of length 12 that connect (1, 2) to (7, 6): 34
+
+TEST 6 END
+
+TEST 7 BEGIN
+$ echo 40 3 17 8 1 9 9 | python3 quiz_6.py
+Enter 7 integers,
+  the second and third ones being nonnegative,
+  the last 4 beeing between 0 and 9: Here is the grid that has been generated:
+      1  0  1  1  1  1  1  1  1  0
+      1  0  1  1  0  1  1  0  1  1
+      1  0  1  0  1  1  1  1  1  1
+      1  1  1  1  1  1  1  0  1  1
+      0  0  1  1  0  1  1  1  1  0
+      1  1  1  1  1  0  0  1  1  1
+      1  0  1  1  0  1  1  1  1  1
+      1  1  1  1  1  0  1  1  1  1
+      0  1  1  0  1  1  1  1  1  1
+      1  1  0  1  0  1  1  1  0  1
+
+Number of paths of length 17 that connect (8, 1) to (9, 9): 193
+
+TEST 7 END
+
+TEST 8 BEGIN
+$ echo 40 3 20 0 5 9 0 | python3 quiz_6.py
+Enter 7 integers,
+  the second and third ones being nonnegative,
+  the last 4 beeing between 0 and 9: Here is the grid that has been generated:
+      1  0  1  1  1  1  1  1  1  0
+      1  0  1  1  0  1  1  0  1  1
+      1  0  1  0  1  1  1  1  1  1
+      1  1  1  1  1  1  1  0  1  1
+      0  0  1  1  0  1  1  1  1  0
+      1  1  1  1  1  0  0  1  1  1
+      1  0  1  1  0  1  1  1  1  1
+      1  1  1  1  1  0  1  1  1  1
+      0  1  1  0  1  1  1  1  1  1
+      1  1  0  1  0  1  1  1  0  1
+
+Number of paths of length 20 that connect (0, 5) to (9, 0): 309
+
+TEST 8 END
+
+TEST 9 BEGIN
+$ echo 40 4 20 6 2 1 9 | python3 quiz_6.py
+Enter 7 integers,
+  the second and third ones being nonnegative,
+  the last 4 beeing between 0 and 9: Here is the grid that has been generated:
+      1  1  1  0  1  1  1  1  1  1
+      1  0  1  1  0  1  1  1  0  1
+      1  1  0  1  1  1  1  1  0  1
+      0  1  1  1  1  1  1  1  1  1
+      1  1  1  1  1  1  1  0  1  1
+      1  1  1  0  0  1  1  1  0  1
+      1  1  1  0  1  1  1  1  1  1
+      1  1  0  0  1  1  1  1  1  0
+      1  1  1  0  1  1  1  1  1  1
+      1  1  1  1  1  0  1  1  1  1
+
+Number of paths of length 20 that connect (6, 2) to (1, 9): 8571
+
+TEST 9 END
+
+TEST 10 BEGIN
+$ echo 30 100 18 9 9 0 0 | python3 quiz_6.py
+Enter 7 integers,
+  the second and third ones being nonnegative,
+  the last 4 beeing between 0 and 9: Here is the grid that has been generated:
+      1  1  1  1  1  1  1  1  1  1
+      1  1  1  1  1  0  1  1  1  1
+      1  1  1  1  1  1  1  1  1  1
+      1  1  1  1  1  1  1  1  1  1
+      1  1  1  1  1  1  1  1  1  1
+      1  1  1  1  1  1  1  1  1  1
+      1  1  1  1  1  1  1  1  1  1
+      1  1  1  1  1  1  1  1  1  1
+      1  1  1  1  1  1  1  1  1  1
+      1  1  1  1  1  1  1  1  1  1
+
+Number of paths of length 18 that connect (9, 9) to (0, 0): 45650
+
+TEST 10 END
+
